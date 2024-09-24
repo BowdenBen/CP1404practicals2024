@@ -4,14 +4,21 @@
 MENU = "(G)et a valid score (must be 0-100 inclusive)\n(P)rint result\n(S)how stars\n(Q)uit"
 
 def main():
+    score = None  # Initialize score as None to track if a valid score has been entered
     choice = input(MENU + "\n>>> ").upper()  # Get user's choice
     while choice != "Q":  # Continue looping until user chooses to quit
         if choice == "G":
             score = get_valid_score()
         elif choice == "P":
-            print_result(score)
+            if score is not None:
+                print_result(score)
+            else:
+                print("No valid score entered yet. Please select 'G' to enter a score.")
         elif choice == "S":
-            show_stars(score)
+            if score is not None:
+                show_stars(score)
+            else:
+                print("No valid score entered yet. Please select 'G' to enter a score.")
         else:
             print("Invalid choice. Please select from the menu options.")
         choice = input(MENU + "\n>>> ").upper()  # Re-prompt for choice
