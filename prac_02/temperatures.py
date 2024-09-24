@@ -25,7 +25,7 @@ def main():
         choice = input(">>> ").upper()
     print("Thank you.")
 
-    main()
+
 
 
 def fahrenheit_to_celsius():
@@ -38,3 +38,5 @@ def celsius_to_fahrenheit():
     celsius = float(input("Celsius: "))  # Celsius variable holds that input as a float
     fahrenheit = celsius * 9.0 / 5 + 32  # Fahrenheit variable is derived from the celsius variable
     return fahrenheit
+
+main()
