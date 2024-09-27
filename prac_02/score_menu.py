@@ -67,6 +67,9 @@ def print_result(score):
     else:
         return "Poor"
 
-# Call the main function to run the program
+""" 
+Call the main function to run the program,makes your code more robust and future-proof, 
+preventing unexpected behavior if the script is ever imported into another module.
+"""
 if __name__ == "__main__":
     main()  # The main function starts the program
