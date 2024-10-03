@@ -45,3 +45,11 @@ with open("numbers.txt", 'r') as file:
 result = number1 + number2
 print(result)  # This should print 59
 
+# Open the file using 'with' and calculate the sum of all lines
+total = 0
+with open("numbers.txt", 'r') as file:
+    for line in file:
+        total += int(line)  # Convert each line to an integer and add to total
+
+# Print the total of all numbers
+print(total)
