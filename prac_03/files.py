@@ -24,3 +24,13 @@ file.write(name)
 
 # Close the file
 file.close()
+
+# Open the file in read mode and read the name from it
+file = open("name.txt", 'r')
+name = file.read().strip()  # Use strip() to remove any extra newlines or spaces
+
+# Close the file
+file.close()
+
+# Print the greeting
+print(f"Hi {name}!")
