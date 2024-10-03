@@ -34,3 +34,14 @@ file.close()
 
 # Print the greeting
 print(f"Hi {name}!")
+
+# Open the file using 'with', which automatically closes the file after reading
+with open("numbers.txt", 'r') as file:
+    # Read the first two lines (numbers) and convert them to integers
+    number1 = int(file.readline())
+    number2 = int(file.readline())
+
+# Add the two numbers and print the result
+result = number1 + number2
+print(result)  # This should print 59
+
