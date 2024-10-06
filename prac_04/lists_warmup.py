@@ -25,3 +25,28 @@ print(numbers[2:])
 
 # Print whether 9 is an element of numbers
 print(9 in numbers)
+
+
+"""
+The following are practice examples from this weeks lectures
+"""
+# Initial score list
+score_pairs = [['Derek', 7], ['Carrie', 8], ['Bob', 6]]
+
+# Ask the user for a new name and score
+new_entry = input("Enter a new name and score (format: name score): ")
+
+# Split the input into name and score
+name, score = new_entry.split()
+score = int(score)  # Convert score to an integer
+
+# Add the new entry to the list
+score_pairs.append([name, score])
+
+# Sort the list by scores in descending order
+sorted_scores = sorted(score_pairs, key=lambda x: x[1], reverse=True)
+
+# Display the final sorted list
+print("Final scores sorted from highest to lowest:")
+for pair in sorted_scores:
+    print(f"{pair[0]}: {pair[1]}")
