@@ -43,7 +43,14 @@ score = int(score)  # Convert score to an integer
 # Add the new entry to the list
 score_pairs.append([name, score])
 
-# Sort the list by scores in descending order
+"""
+Sort the list by scores in descending order
+lambda x: Defines an anonymous function that takes one argument, x. Each element of the list score_pairs will be 
+passed to this function one by one. In this case, each element is a list (like ['Derek', 7]).
+x[1]: This part of the lambda function tells Python to use the second element of the list (the score) for 
+sorting. x[1] means "the second item in x", where x is one of the [name, score] pairs.
+For example, when x = ['Derek', 7], x[1] will be 7.
+"""
 sorted_scores = sorted(score_pairs, key=lambda x: x[1], reverse=True)
 
 # Display the final sorted list
