@@ -23,3 +23,30 @@ END
 
 '''
 
+import random
+
+# Constants
+MIN_NUMBER = 1
+MAX_NUMBER = 45
+NUMBERS_PER_PICK = 6
+
+
+def main():
+    """Main function to generate and display the quick picks"""
+    quick_picks = int(input("How many quick picks? "))
+
+    for i in range(quick_picks):
+        current_pick = []
+
+        while len(current_pick) < NUMBERS_PER_PICK:
+            number = random.randint(MIN_NUMBER, MAX_NUMBER)
+            if number not in current_pick:
+                current_pick.append(number)
+
+        current_pick.sort()
+
+
+        print(" ".join(f"{num:2}" for num in current_pick))
+
+
+main()
