@@ -57,3 +57,27 @@ sorted_scores = sorted(score_pairs, key=lambda x: x[1], reverse=True)
 print("Final scores sorted from highest to lowest:")
 for pair in sorted_scores:
     print(f"{pair[0]}: {pair[1]}")
+
+# Define a string variable called 'text'
+text = "This is a sentence"
+
+# List comprehension to extract words with more than 3 characters
+# 'text.split()' splits the string into a list of words
+# 'word' is each individual word in the list created by 'split()'
+# 'if len(word) > 3' filters only the words that have more than 3 characters
+long_words = [word for word in text.split() if len(word) > 3]
+
+# Print the list of words that have more than 3 characters
+print(long_words)
+
+list1 = [1, 2, 3]
+list2 = [1, 2, 3]
+list3 = list1
+
+# Value equality
+print(list1 == list2)  # True: values are equal
+print(list1 == list3)  # True: values are equal
+
+# Reference equality
+print(list1 is list2)  # False: different objects
+print(list1 is list3)  # True: same object
