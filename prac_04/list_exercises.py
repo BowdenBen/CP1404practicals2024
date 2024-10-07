@@ -15,6 +15,15 @@ START
     CALCULATE the average by dividing the sum of the numbers list by the number of elements in the list
     DISPLAY "The average of the numbers is" followed by the calculated average
 
+    Copy the following list of usernames:
+
+   usernames = ['jimbo', 'giltson98', 'derekf', 'WhatSup', 'NicolEye', 'swei45', 'BaseInterpreterInterface',
+   'BaseStdIn', 'Command', 'ExecState', 'InteractiveConsole', 'InterpreterInterface', 'StartServer', 'bob']
+Ask the user for their username. If the username is in the above list of authorised users, print "Access granted",
+otherwise print "Access denied".
+
+
+
 END
 '''
 
@@ -23,6 +32,11 @@ def main():
     """Main function to input numbers and display information about them."""
     # Initialize an empty list to store the numbers
     numbers = []
+    # List of authorized usernames
+    usernames = ['jimbo', 'giltson98', 'derekf', 'WhatSup', 'NicolEye', 'swei45',
+                 'BaseInterpreterInterface', 'BaseStdIn', 'Command', 'ExecState',
+                 'InteractiveConsole', 'InterpreterInterface', 'StartServer', 'bob']
+
 
     # Prompt the user to enter 5 numbers and add each to the list
     for i in range(5):
@@ -38,6 +52,15 @@ def main():
     print(f"The largest number is {max(numbers)}")  # Display the largest number using the 'max' function
     # Calculate and display the average of the numbers, formatted to 1 decimal place
     print(f"The average of the numbers is {sum(numbers) / len(numbers):.1f}")
+
+    # Prompt the user for their username
+    username = input("Enter your username: ")
+
+    # Check if the username is in the list of authorized users
+    if username in usernames:
+        print("Access granted")
+    else:
+        print("Access denied")
 
 
 # Call the main function to execute the program
