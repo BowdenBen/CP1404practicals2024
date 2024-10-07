@@ -33,20 +33,20 @@ NUMBERS_PER_PICK = 6
 
 def main():
     """Main function to generate and display the quick picks"""
-    quick_picks = int(input("How many quick picks? "))
+    quick_picks = int(input("How many quick picks? ")) # Ask the user for the number of quick picks they wish to generate
 
-    for i in range(quick_picks):
-        current_pick = []
+    for i in range(quick_picks): # Loop for the number of quick picks the user requested
+        current_pick = [] # Initialize an empty list to hold the numbers
 
-        while len(current_pick) < NUMBERS_PER_PICK:
-            number = random.randint(MIN_NUMBER, MAX_NUMBER)
-            if number not in current_pick:
-                current_pick.append(number)
+        while len(current_pick) < NUMBERS_PER_PICK: # Generate numbers for each quick pick up to NUMBERS_PER_PICK
+            number = random.randint(MIN_NUMBER, MAX_NUMBER) # Numbers generated are between 2 boundaries
+            if number not in current_pick: # Check for double ups
+                current_pick.append(number) # Add number to list
 
-        current_pick.sort()
+        current_pick.sort() # Sort each quick pick from low to high
 
 
-        print(" ".join(f"{num:2}" for num in current_pick))
+        print(" ".join(f"{num:2}" for num in current_pick)) # Print each quick pick
 
 
 main()
