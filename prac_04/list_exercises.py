@@ -29,39 +29,41 @@ END
 
 
 def main():
-    """Main function to input numbers and display information about them."""
-    # Initialize an empty list to store the numbers
+    """Main function to input numbers, display information, and check user access."""
+
+    # Initialize an empty list to store the numbers that the user will input
     numbers = []
-    # List of authorized usernames
+
+    # List of authorized usernames for access control
     usernames = ['jimbo', 'giltson98', 'derekf', 'WhatSup', 'NicolEye', 'swei45',
                  'BaseInterpreterInterface', 'BaseStdIn', 'Command', 'ExecState',
                  'InteractiveConsole', 'InterpreterInterface', 'StartServer', 'bob']
 
-
     # Prompt the user to enter 5 numbers and add each to the list
     for i in range(5):
-        # Get a number from the user, converting it to float (for decimal values)
+        # Get a number from the user, convert it to a float to allow decimal values
         number = float(input(f"Number {i + 1}: "))
-        # Add the entered number to the 'numbers' list
+        # Add the entered number to the 'numbers' list using append
         numbers.append(number)
 
-        # Output the requested information about the numbers
-    print(f"The first number is {numbers[0]}")  # Display the first number in the list
-    print(f"The last number is {numbers[-1]}")  # Display the last number in the list using negative indexing
+    # Output the requested information about the numbers
+    print(f"The first number is {numbers[0]}")  # Display the first number in the list (index 0)
+    print(f"The last number is {numbers[-1]}")  # Display the last number in the list (negative index -1)
     print(f"The smallest number is {min(numbers)}")  # Display the smallest number using the 'min' function
     print(f"The largest number is {max(numbers)}")  # Display the largest number using the 'max' function
-    # Calculate and display the average of the numbers, formatted to 1 decimal place
+    # Calculate and display the average of the numbers using sum and len, formatted to 1 decimal place
     print(f"The average of the numbers is {sum(numbers) / len(numbers):.1f}")
 
-    # Prompt the user for their username
+    # Prompt the user to enter their username for access control
     username = input("Enter your username: ")
 
-    # Check if the username is in the list of authorized users
+    # Check if the entered username is in the list of authorized users
     if username in usernames:
-        print("Access granted")
+        print("Access granted")  # If the username exists in the list, grant access
     else:
-        print("Access denied")
+        print("Access denied")  # If the username is not in the list, deny access
 
 
 # Call the main function to execute the program
 main()
+
