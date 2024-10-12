@@ -2,6 +2,7 @@
 CP1404/CP5632 Practical
 List comprehensions
 """
+from prac_03.string_formatting import number
 
 names = ["Bob", "Angel", "Jimi", "Alan", "Ada"]
 full_names = ["Bob Martin", "Angel Harlem", "Jimi Hendrix", "Alan Turing", "Ada Lovelace"]
@@ -29,16 +30,27 @@ print(a_names)
 # 'Ada Alan Angel Bob Jimi'
 print(" ".join(sorted(names)))
 
-# TODO: list comprehension to create a list of all the full_names in lowercase format
-# lowercase_full_names =
+# The list comprehension iterates over each full name in the list `full_names`
+# For each full name, the `lower()` method is called to convert the name to lowercase.
+# The result is stored in the list `lowercase_full_names`.
+lowercase_full_names = [name.lower() for name in full_names]
+print(lowercase_full_names)
 
+# This list comprehension converts each string in `almost_numbers` to an integer using `int()`.
+# The result is stored in the list `numbers`.
 almost_numbers = ['0', '10', '21', '3', '-7', '88', '9']
-# TODO: list comprehension to create a list of integers from the above list of strings
-# numbers =
+numbers = [int(number) for number in almost_numbers]
+print(numbers)
 
-# TODO: list comprehension to create a list of only the numbers that are
-# greater than 9 from the numbers (not strings) you just created
+# After converting to integers, this list comprehension filters the numbers by checking if they are greater than 9.
+# Only numbers that satisfy the condition `number > 9` are included in the resulting list.
+numbers_greater_than_9 = [number for number in numbers if number > 9]
+print(numbers_greater_than_9)
 
-# TODO: (more advanced) use a list comprehension and the join string method
-# to create a string (not list) of the last names for those full names longer than 11 characters
+# The list comprehension iterates through `full_names`, splits each name into first and last names using `split()`.
+# It then checks if the full name length is greater than 11 characters.
+# If true, it takes the last name (index 1 of the split result).
+# Finally, `join()` combines the selected last names into a single string, separated by commas.
+long_last_name = ", ".join([name.split()[1] for name in full_names if len(name) > 11])
+print(long_last_name)
 # the result should be: 'Harlem, Hendrix, Lovelace'
