@@ -28,7 +28,7 @@ print(9 in numbers)
 
 
 # """
-# The following are practice examples from this weeks lectures
+# The following are practice examples from this week's lectures
 # """
 # # Initial score list
 # score_pairs = [['Derek', 7], ['Carrie', 8], ['Bob', 6]]
