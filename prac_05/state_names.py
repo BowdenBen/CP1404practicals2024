@@ -5,7 +5,7 @@ File needs reformatting
 """
 
 # Dictionary of Australian state/territory codes and their full names.
-# The keys are state abbreviations (like 'QLD') and values are the corresponding full names (like 'Queensland').
+# The keys are state abbreviations (like 'QLD') and the values are the corresponding full names (like 'Queensland').
 CODE_TO_NAME = {"QLD": "Queensland", "NSW": "New South Wales", "NT": "Northern Territory", "WA": "Western Australia",
                 "ACT": "Australian Capital Territory", "VIC": "Victoria", "TAS": "Tasmania"}
 # Print the entire dictionary for initial reference.
