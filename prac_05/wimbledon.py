@@ -47,11 +47,22 @@ def display_countries(champion_countries):
     sorted_countries = sorted(champion_countries)
     print(", ".join(sorted_countries))
 
+
 def main():
-    PRINT "Wimbledon Champions:"
-    CALL display_champions(champions_dict)
-    PRINT "These countries have won Wimbledon:"
-    CALL display_countries(countries_set)
+    """Main function to drive the program."""
+    champions_data = read_file(FILENAME)
+    champion_wins = count_champion_wins(champions_data)
+    countries = get_countries(champions_data)
+
+    # Display champions and their win counts
+    print("Champions and their number of wins:")
+    for champion, wins in champion_wins.items():
+        print(f"{champion}: {wins} times")
+
+    # Display countries that have won Wimbledon
+    print(f"\nThese {len(countries)} countries have won Wimbledon:")
+    print(", ".join(countries))
+
 
 if __name__ == "__main__":
     main()
