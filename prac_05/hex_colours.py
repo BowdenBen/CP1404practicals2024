@@ -12,33 +12,17 @@ COLOURS = {"aliceblue": "#f0f8ff", "antiquewhite": "#faebd7", "aqua": "#00ffff",
 for name, colour in COLOURS.items():
     print(f"{name:16}{colour}")
 
-# Start an infinite loop
-loop:
-# Prompt the user to enter a color name
-color_name = get
-user
-input("Enter color name (or blank to quit)")
 
-# Remove leading/trailing spaces and convert to lowercase
-color_name = trim
-spaces and convert
-to
-lowercase
-
-# If the input is blank, break the loop
-if color_name is blank:
-    break
-    the
-    loop
-
-# Check if color name exists in the dictionary
-if color_name exists in COLORS:
-    # Display the hex code for the color
-    print
-    "The hex code for color_name is COLORS[color_name]"
-else:
-    # Print error message for invalid color name
-    print
-    "Sorry, that color is not found"
-
-# End of the program
+# Input and process state codes using EAFP
+code_colour = input("Enter colour from list: ").lower()
+while code_colour != "":
+    try:
+        # If the state code exists in CODE_TO_NAME, this will succeed, and the state's name is printed.
+        print(f"The HEX code for {code_colour} is {COLOURS[code_colour]}.")
+    except KeyError:
+        # If the state code doesn't exist in the dictionary, a KeyError is raised.
+        # The KeyError is caught and an error message is displayed to the user.
+        print("Sorry, that color is not found")
+    # After processing, ask the user for another state code.
+    # The input is again converted to uppercase to maintain case-insensitivity.
+    code_colour = input("Enter colour from list: ").lower()
