@@ -5,7 +5,6 @@ Estimate: 30 minutes
 Actual:   40 minutes
 """
 
-
 # Prompt user for a string input and split the input string into a list of words
 # The input() function captures the user's input, and split() divides the string into words using spaces as delimiters.
 words = input("Enter a string: ").split()
@@ -37,5 +36,3 @@ for word in sorted_words:
     # Print each word and its corresponding count
     # f"{word:{max_length}}" ensures the words are left-aligned in a column, using the length of the longest word.
     print(f"{word:{max_length}} : {word_count[word]}")
-
-
