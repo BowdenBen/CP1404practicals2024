@@ -13,12 +13,11 @@ print(CODE_TO_NAME)
 for code, name in CODE_TO_NAME.items():
     print(f"{code:3} is {name}")
 
+# Input and process state codes using EAFP
 state_code = input("Enter short state: ").upper()
 while state_code != "":
-    if state_code in CODE_TO_NAME:
-        print(state_code, "is", CODE_TO_NAME[state_code])
-    else:
+    try:
+        print(f"{state_code:3} is {CODE_TO_NAME[state_code]}")
+    except KeyError:
         print("Invalid short state")
     state_code = input("Enter short state: ").upper()
-
-
