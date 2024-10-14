@@ -27,15 +27,15 @@ for word in words:
 
 print(word_count)
 
-# Find the length of the longest word for formatting
-max_length = find the length of the longest word in word_count.keys()
-
-# Sort the dictionary by word (key) alphabetically
-sorted_words = sorted(word_count.keys())
-
-# Print the word counts with formatted output
-for each word in sorted_words:
-    # Print word and its count, aligned using f-string formatting
-    print(f"{word:{max_length}} : {word_count[word]}")
+# # Find the length of the longest word for formatting
+# max_length = find the length of the longest word in word_count.keys()
+#
+# # Sort the dictionary by word (key) alphabetically
+# sorted_words = sorted(word_count.keys())
+#
+# # Print the word counts with formatted output
+# for each word in sorted_words:
+#     # Print word and its count, aligned using f-string formatting
+#     print(f"{word:{max_length}} : {word_count[word]}")
 
 # End of function
