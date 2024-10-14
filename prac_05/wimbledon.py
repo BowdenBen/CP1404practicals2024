@@ -42,9 +42,10 @@ def display_champions(champions_dict):
         print(f"{champion} {wins}")
 
 
-FUNCTION display_countries(countries_set):
-    SORT countries_set
-    PRINT ', '.join(countries_set)
+def display_countries(champion_countries):
+    """Display the countries in alphabetical order."""
+    sorted_countries = sorted(champion_countries)
+    print(", ".join(sorted_countries))
 
 def main():
     PRINT "Wimbledon Champions:"
