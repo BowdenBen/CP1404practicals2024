@@ -27,9 +27,10 @@ for word in words:
 
 print(word_count)
 
-# # Find the length of the longest word for formatting
-# max_length = find the length of the longest word in word_count.keys()
-#
+# Find the length of the longest word for formatting
+max_length = max(len(word) for word in word_count.keys())
+print(f"The length of the longest word is: {max_length}")
+
 # # Sort the dictionary by word (key) alphabetically
 # sorted_words = sorted(word_count.keys())
 #
