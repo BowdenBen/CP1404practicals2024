@@ -30,22 +30,27 @@ def main:
 
     email = "placeholder"
 
-    While email != "":
+    # Continue asking for input until the user enters an empty email
+    while email != "":
         # Prompt the user to enter their email
         email = input("Email: ")
 
-        Call extract_name_from_email(email) to get a suggested name.
-        Prompt the user: "Is your name [suggested_name]? (Y/n)".
+        # Only proceed if the email is not empty
+        if email != "":
+            # Extract a suggested name from the email
+            suggested_name = extract_name_from_email(email)
 
-        If the user enters "Y" or presses "Enter":
-            Set name = suggested_name.
-        Else:
-            Prompt the user to enter their actual name: "Name: ".
-            Set name = entered name.
+            # Ask the user to confirm if the extracted name is correct
+            confirmation = input(f"Is your name {suggested_name}? (Y/n) ").strip().lower()
 
-        Store the email (as key) and name (as value) in the dictionary.
+            if confirmation == "" or confirmation == "y":
+                # If the user presses Enter or 'Y', use the suggested name
+                name = suggested_name
+            else:
+                # Otherwise, ask for the user's actual name
+                name = input("Name: ")
 
-    End of loop.
-
+            # Store the email (as key) and name (as value) in the dictionary
+            email_to_name[email] = name
     For each email-name pair in email_to_name:
         Print the name and email in the format: "Name (email)".
