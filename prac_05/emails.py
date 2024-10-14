@@ -8,10 +8,6 @@ Actual:    minutes
 
 
 def extract_name_from_email(email):
-    """
-    Extracts and formats a name from an email address.
-    Example: "lindsay.ward@jcu.edu.au" -> "Lindsay Ward"
-    """
     # Split the email at '@' to get the local part (before the '@')
     local_part = email.split('@')[0]
 
@@ -28,31 +24,28 @@ def extract_name_from_email(email):
     return name
 
 
-# Example usage
-email = "lindsay.ward@jcu.edu.au"
-name = extract_name_from_email(email)
-print(name)  # Output: Lindsay Ward
+def main:
 
-#
-# Main function:
-#     Initialize an empty dictionary: email_to_name.
-#
-#     While True:
-#         Prompt the user to enter their email: "Email: "
-#         If the email is blank, break the loop.
-#
-#         Call extract_name_from_email(email) to get a suggested name.
-#         Prompt the user: "Is your name [suggested_name]? (Y/n)".
-#
-#         If the user enters "Y" or presses "Enter":
-#             Set name = suggested_name.
-#         Else:
-#             Prompt the user to enter their actual name: "Name: ".
-#             Set name = entered name.
-#
-#         Store the email (as key) and name (as value) in the dictionary.
-#
-#     End of loop.
-#
-#     For each email-name pair in email_to_name:
-#         Print the name and email in the format: "Name (email)".
+    email_to_name = {}
+
+    email = "placeholder"
+
+    While email != "":
+        # Prompt the user to enter their email
+        email = input("Email: ")
+
+        Call extract_name_from_email(email) to get a suggested name.
+        Prompt the user: "Is your name [suggested_name]? (Y/n)".
+
+        If the user enters "Y" or presses "Enter":
+            Set name = suggested_name.
+        Else:
+            Prompt the user to enter their actual name: "Name: ".
+            Set name = entered name.
+
+        Store the email (as key) and name (as value) in the dictionary.
+
+    End of loop.
+
+    For each email-name pair in email_to_name:
+        Print the name and email in the format: "Name (email)".
