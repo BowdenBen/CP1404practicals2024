@@ -24,7 +24,7 @@ def extract_name_from_email(email):
     return name
 
 
-def main:
+def main():
 
     email_to_name = {}
 
@@ -52,5 +52,11 @@ def main:
 
             # Store the email (as key) and name (as value) in the dictionary
             email_to_name[email] = name
-    For each email-name pair in email_to_name:
-        Print the name and email in the format: "Name (email)".
+
+    # After exiting the loop, print the names and emails in the specified format
+    for email, name in email_to_name.items():
+        print(f"{name} ({email})")
+
+# Run the main function
+if __name__ == "__main__":
+    main()
