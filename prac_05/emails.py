@@ -3,7 +3,7 @@ Write a program that stores users' emails (unique keys) and names (values) in a 
 Ask the user for their email until they enter a blank one.
 By Benjamin Bowden
 Estimate: 30 minutes
-Actual:    minutes
+Actual:  45  minutes
 """
 
 def extract_name_from_email(email):
