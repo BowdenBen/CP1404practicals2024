@@ -7,7 +7,11 @@ Estimate: 50 minutes
 Actual:   minutes
 """
 
+filename = "wimbledon.csv"
+
 FUNCTION process_file(file):
+OPEN file "wimbledon_data.csv" with encoding "utf-8-sig"
+    champions_list, champions_dict, countries_set = process_file(file)
     INIT empty list matches, dictionary champions_dict, set countries_set
     SKIP header line
     FOR each line in file:
@@ -26,10 +30,10 @@ FUNCTION display_countries(countries_set):
     PRINT ', '.join(countries_set)
 
 FUNCTION main():
-    OPEN file "wimbledon_data.csv" with encoding "utf-8-sig"
-    champions_list, champions_dict, countries_set = process_file(file)
     PRINT "Wimbledon Champions:"
     CALL display_champions(champions_dict)
     PRINT "These countries have won Wimbledon:"
     CALL display_countries(countries_set)
-    CLOSE file
+
+if __name__ == "__main__":
+    main()
