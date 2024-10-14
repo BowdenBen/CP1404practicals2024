@@ -13,16 +13,16 @@ for name, colour in COLOURS.items():
     print(f"{name:16}{colour}")
 
 
-# Input and process state codes using EAFP
+# Input and process colour using EAFP
 code_colour = input("Enter colour from list: ").lower()
 while code_colour != "":
     try:
-        # If the state code exists in CODE_TO_NAME, this will succeed, and the state's name is printed.
+        # If the colour exists in COLOURS, this will succeed, and the colour's code is printed.
         print(f"The HEX code for {code_colour} is {COLOURS[code_colour]}.")
     except KeyError:
-        # If the state code doesn't exist in the dictionary, a KeyError is raised.
+        # If the colour doesn't exist in the dictionary, a KeyError is raised.
         # The KeyError is caught and an error message is displayed to the user.
         print("Sorry, that color is not found")
-    # After processing, ask the user for another state code.
+    # After processing, ask the user for another colour.
     # The input is again converted to uppercase to maintain case-insensitivity.
     code_colour = input("Enter colour from list: ").lower()
