@@ -36,9 +36,11 @@ def process_file(filename):
 
     return champions, champions_dict, champion_countries
 
-FUNCTION display_champions(champions_dict):
-    FOR each champion, wins in champions_dict:
-        PRINT champion, wins
+def display_champions(champions_dict):
+    """Display the champions and their win counts."""
+    for champion, wins in sorted(champions_dict.items()):
+        print(f"{champion} {wins}")
+
 
 FUNCTION display_countries(countries_set):
     SORT countries_set
