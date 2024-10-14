@@ -12,7 +12,7 @@ count_word_occurrences():
 input_string = input("Enter a string: ")
 
 # Split the input string into words
-words = split input_string into list of words
+words = input_string.split()
 
 # Initialize an empty dictionary to store word counts
 word_count = {}
