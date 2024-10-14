@@ -36,9 +36,9 @@ print(sorted_words)
 max_length = max(len(word) for word in word_count.keys())
 print(f"The length of the longest word is: {max_length}")
 
-# # Print the word counts with formatted output
-# for each word in sorted_words:
-#     # Print word and its count, aligned using f-string formatting
-#     print(f"{word:{max_length}} : {word_count[word]}")
+# Print the word counts with formatted output
+for word in sorted_words:
+    # Print word and its count, aligned using f-string formatting
+    print(f"{word:{max_length}} : {word_count[word]}")
 
 # End of function
