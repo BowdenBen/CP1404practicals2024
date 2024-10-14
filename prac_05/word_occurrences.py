@@ -7,10 +7,7 @@ Actual:   32 minutes
 
 
 # Prompt user for a string input
-input_string = input("Enter a string: ")
-
-# Split the input string into words
-words = input_string.split()
+words = input("Enter a string: ").split()
 
 # Initialize an empty dictionary to store word counts
 word_count = {}
