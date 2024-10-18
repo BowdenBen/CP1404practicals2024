@@ -6,28 +6,6 @@ Estimate: 30 minutes
 Actual:  45  minutes
 """
 
-def extract_name_from_email(email):
-    """
-    Extracts and formats a name from an email address.
-    Example: "john.doe@example.com" -> "John Doe"
-    """
-    # Split the email at '@' to get the local part (before the '@')
-    local_part = email.split('@')[0]
-
-    # Split the local part at '.' or '_' to get individual parts of the name
-    # This handles names like "john.doe" or "john_doe"
-    if '.' in local_part:
-        name_parts = local_part.split('.')
-    else:
-        name_parts = local_part.split('_')
-
-    # Capitalize each part of the name using title() and join them with spaces
-    name = ' '.join(part.title() for part in name_parts)
-
-    # Return the formatted name
-    return name
-
-
 def main():
     """
     Main function to prompt the user for emails and store names based on them.
@@ -67,6 +45,27 @@ def main():
         # Format and print each name and email in the specified format: "Name (email)"
         print(f"{name} ({email})")
 
+
+def extract_name_from_email(email):
+    """
+    Extracts and formats a name from an email address.
+    Example: "john.doe@example.com" -> "John Doe"
+    """
+    # Split the email at '@' to get the local part (before the '@')
+    local_part = email.split('@')[0]
+
+    # Split the local part at '.' or '_' to get individual parts of the name
+    # This handles names like "john.doe" or "john_doe"
+    if '.' in local_part:
+        name_parts = local_part.split('.')
+    else:
+        name_parts = local_part.split('_')
+
+    # Capitalize each part of the name using title() and join them with spaces
+    name = ' '.join(part.title() for part in name_parts)
+
+    # Return the formatted name
+    return name
 
 # Run the main function only if the script is executed directly
 if __name__ == "__main__":
