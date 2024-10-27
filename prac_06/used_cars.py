@@ -9,8 +9,8 @@ from prac_06.car import Car
 
 def main():
     """Demo test code to show how to use car class."""
-    my_car = Car(180)
-    limo = Car(100)
+    my_car = Car("My Car", 180)
+    limo = Car("Limo", 100)
     my_car.drive(30)
     limo.drive(115)
     limo.add_fuel(20)
