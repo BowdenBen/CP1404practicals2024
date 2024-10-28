@@ -5,12 +5,9 @@ class ProgrammingLanguage:
         self.typing = typing
         self.reflection = reflection
         self.year = year
-#
-#     Method is_dynamic():
-#         If self.typing equals "Dynamic":
-#             Return True
-#         Else:
-#             Return False
+
+    def is_dynamic(self):
+        return self.typing == "dynamic"
 #
 #     Method __str__():
 #         Return formatted string with name, typing, reflection, and year
