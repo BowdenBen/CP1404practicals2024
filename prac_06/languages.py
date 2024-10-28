@@ -1,5 +1,5 @@
-# Import ProgrammingLanguage
-#
+from programming_language import ProgrammingLanguage
+
 # # Create language objects
 # python = ProgrammingLanguage("Python", "Dynamic", True, 1991)
 # ruby = ProgrammingLanguage("Ruby", "Dynamic", True, 1995)
