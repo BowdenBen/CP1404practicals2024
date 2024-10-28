@@ -12,18 +12,18 @@ def main():
     print("My guitars!")
 
     # Input loop to get guitar details
-    # While True:
-    #     name = Input "Name: "
-    #     If name is empty:
-    #         Break
-    #     year = Input "Year: "
-    #     cost = Input "Cost: "
-    #
-    #     # Create a new Guitar object and add it to the list
-    #     new_guitar = Guitar(name, year, cost)
-    #     guitars.append(new_guitar)
-    #
-    #     Print f"{name} ({year}) : ${cost:.2f} added."
+    name = input("Name: ")
+    while name != "":
+        year = int(input("Year: "))
+        cost = float(input("Cost: "))
+
+        # Create a new Guitar object and add it to the list
+        new_guitar = Guitar(name, year, cost)
+        guitars.append(new_guitar)
+
+        print(f"{name} ({year}) : ${cost:.2f} added.")
+
+        name = input("Name: ")
 
 
  # Print all stored guitars
