@@ -3,8 +3,8 @@ Time to completion EST: 30 hour
 Actual Time to Completion:
 """
 
+from guitar import Guitar
 
-# Import Guitar
 
 # Create an empty list to store guitars
 # guitars = []
