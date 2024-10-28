@@ -12,12 +12,13 @@ def main():
 
     # Create a list of languages
     languages = [python, ruby, visual_basic]
-#
-# Print "The dynamically typed languages are:"
-#
-# # Loop through the languages list
-# For language in languages:
-#     If language.is_dynamic():
-#         Print language.name
+
+    print("The dynamically typed languages are:")
+
+    for language in languages: # Loop through the languages list
+        if language.is_dynamic():
+            print(language.name)
+
+
 if __name__ == "__main__":
     main()
