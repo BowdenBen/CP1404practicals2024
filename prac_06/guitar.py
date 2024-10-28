@@ -1,10 +1,15 @@
-# Class Guitar:
-#
-#     Method __init__(name="", year=0, cost=0):
-#         Set self.name to name
-#         Set self.year to year
-#         Set self.cost to cost
-#
+"""
+Time to completion EST: 1 hour
+Actual Time to Completion:
+"""
+
+class Guitar:
+
+    def __init__(self, name="", year=0, cost=0):
+        self.name = name
+        self.year = year
+        self.cost = cost
+
 #     Method __str__():
 #         Return formatted string of guitar details: name, year, cost
 #
