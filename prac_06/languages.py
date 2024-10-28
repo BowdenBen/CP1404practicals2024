@@ -9,9 +9,9 @@ def main():
 
     # Print the string representation of Python
     print(python)
-#
-# # Create a list of languages
-# languages = [python, ruby, visual_basic]
+
+    # Create a list of languages
+    languages = [python, ruby, visual_basic]
 #
 # Print "The dynamically typed languages are:"
 #
