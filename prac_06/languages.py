@@ -7,8 +7,8 @@ def main():
     ruby = ProgrammingLanguage("Ruby", "Dynamic", True, 1995)
     visual_basic = ProgrammingLanguage("Visual Basic", "Static", False, 1991)
 
-# # Print the string representation of Python
-# Print python
+    # Print the string representation of Python
+    print(python)
 #
 # # Create a list of languages
 # languages = [python, ruby, visual_basic]
