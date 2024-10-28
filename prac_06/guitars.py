@@ -6,8 +6,8 @@ Actual Time to Completion:
 from guitar import Guitar
 
 def main():
-# Create an empty list to store guitars
-# guitars = []
+    # Create an empty list to store guitars
+    guitars = []
 
 # Print "My guitars!"
 
