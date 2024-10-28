@@ -10,9 +10,9 @@ class Guitar:
         self.year = year
         self.cost = cost
 
-#     Method __str__():
-#         Return formatted string of guitar details: name, year, cost
-#
+    def __str__(self):
+        return f"{self.namer} ({self.year}) : {self.cost}"
+
 #     Method get_age():
 #         Calculate age by subtracting self.year from current year
 #         Return age
