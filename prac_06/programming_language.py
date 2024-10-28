@@ -1,10 +1,10 @@
-# Class ProgrammingLanguage:
-#
-#     Method __init__(name, typing, reflection, year):
-#         Set self.name to name
-#         Set self.typing to typing
-#         Set self.reflection to reflection
-#         Set self.year to year
+class ProgrammingLanguage:
+
+    def __init__(self, name, typing, reflection, year):
+        self.name = name
+        self.typing = typing
+        self.reflection = reflection
+        self.year = year
 #
 #     Method is_dynamic():
 #         If self.typing equals "Dynamic":
