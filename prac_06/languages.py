@@ -1,5 +1,7 @@
 from programming_language import ProgrammingLanguage
 
+
+def main():
 # # Create language objects
 # python = ProgrammingLanguage("Python", "Dynamic", True, 1991)
 # ruby = ProgrammingLanguage("Ruby", "Dynamic", True, 1995)
@@ -17,3 +19,5 @@ from programming_language import ProgrammingLanguage
 # For language in languages:
 #     If language.is_dynamic():
 #         Print language.name
+if __name__ == "__main__":
+    main()
