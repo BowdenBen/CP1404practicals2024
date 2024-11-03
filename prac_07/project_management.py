@@ -69,16 +69,15 @@ def display_projects(projects):
     for project in complete:
         print(f"  {project}")
 
-#
-# 5. Define filter_projects_by_date function with parameter projects:
-#     Prompt user for date input
-#     Convert date input to date object
-#     Initialize empty list for filtered_projects
-#     For each project in projects:
-#         If project start_date is after input date, add to filtered_projects list
-#     Sort filtered_projects by start_date
-#     Print each project in filtered_projects
-#
+def filter_projects_by_date(projects):
+    date_string = input("Show projects that start after date (dd/mm/yyyy): ")
+    date = datetime.datetime.strptime(date_string, "%d/%m/%Y").date()
+    filtered_projects = [p for p in projects if p.start_date > date]
+    filtered_projects.sort(key=lambda p: p.start_date)
+    for project in filtered_projects:
+        print(f"  {project}")
+
+
 # 6. Define add_project function with parameter projects:
 #     Prompt user for project details: name, start_date, priority, cost, completion
 #     Convert start_date to date object, priority to integer, cost to float, completion to integer
