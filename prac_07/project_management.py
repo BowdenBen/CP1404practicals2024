@@ -77,21 +77,30 @@ def filter_projects_by_date(projects):
     for project in filtered_projects:
         print(f"  {project}")
 
+def add_project(projects):
+    print("Let's add a new project")
+    name = input("Name: ")
+    start_date_str = input("Start date (dd/mm/yyyy): ")
+    start_date = datetime.datetime.strptime(start_date_str, "%d/%m/%Y").date()
+    priority = int(input("Priority: "))
+    cost = float(input("Cost estimate: $"))
+    completion = int(input("Percent complete: "))
+    project = Project(name, start_date, priority, cost, completion)
+    projects.append(project)
 
-# 6. Define add_project function with parameter projects:
-#     Prompt user for project details: name, start_date, priority, cost, completion
-#     Convert start_date to date object, priority to integer, cost to float, completion to integer
-#     Create Project object with user inputs
-#     Append Project object to projects list
-#
-# 7. Define update_project function with parameter projects:
-#     Display each project with an index
-#     Prompt user to select project index
-#     Get selected project from projects list
-#     Prompt for new completion percentage and new priority
-#     If new completion is entered, update project completion
-#     If new priority is entered, update project priority
-#
+def update_project(projects):
+    for i, project in enumerate(projects):
+        print(f"{i} {project}")
+    choice = int(input("Project choice: "))
+    project = projects[choice]
+    print(project)
+    completion = input("New completion percentage: ")
+    if completion:
+        project.update_completion(int(completion))
+    priority = input("New priority: ")
+    if priority:
+        project.update_priority(int(priority))
+
 
 #
 # Call main function to run program
