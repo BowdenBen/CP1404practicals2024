@@ -57,14 +57,18 @@ def save_projects(filename, projects):
             file.write(f"{project.name}\t{project.start_date.strftime('%d/%m/%Y')}\t{project.priority}\t{project.cost}\t{project.completion}\n")
 
 
-# 4. Define display_projects function with parameter projects:
-#     Initialize empty list for incomplete_projects and complete_projects
-#     For each project in projects:
-#         If project is complete, add to complete_projects list
-#         Else, add to incomplete_projects list
-#     Sort incomplete_projects and complete_projects by priority
-#     Print incomplete projects
-#     Print complete projects
+def display_projects(projects):
+    incomplete = [p for p in projects if not p.is_complete()]
+    complete = [p for p in projects if p.is_complete()]
+    incomplete.sort()
+    complete.sort()
+    print("Incomplete projects:")
+    for project in incomplete:
+        print(f"  {project}")
+    print("Completed projects:")
+    for project in complete:
+        print(f"  {project}")
+
 #
 # 5. Define filter_projects_by_date function with parameter projects:
 #     Prompt user for date input
