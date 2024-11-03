@@ -1,6 +1,6 @@
 """
 Time to completion EST: 1 hour
-Actual Time to Completion:
+Actual Time to Completion: 2 hours
 """
 
 import datetime
