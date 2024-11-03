@@ -2,8 +2,41 @@
 Time to completion EST: 1 hour
 Actual Time to Completion:
 """
+
+import datetime
 import csv
 from project import Project
+
+
+def main():
+    projects = load_projects("projects.txt")
+    print(f"Loaded {len(projects)} projects from projects.txt")
+
+    while True:
+        print(
+            "\n- (L)oad projects\n- (S)ave projects\n- (D)isplay projects\n- (F)ilter projects by date\n- (A)dd new project\n- (U)pdate project\n- (Q)uit")
+        choice = input(">>> ").lower()
+
+        if choice == 'l':
+            filename = input("Filename: ")
+            projects = load_projects(filename)
+        elif choice == 's':
+            filename = input("Filename: ")
+            save_projects(filename, projects)
+        elif choice == 'd':
+            display_projects(projects)
+        elif choice == 'f':
+            filter_projects_by_date(projects)
+        elif choice == 'a':
+            add_project(projects)
+        elif choice == 'u':
+            update_project(projects)
+        elif choice == 'q':
+            if input("Would you like to save to projects.txt? (y/n): ").lower() == 'y':
+                save_projects("projects.txt", projects)
+            break
+        else:
+            print("Invalid option")
 
 
 def load_projects(filename):
@@ -55,39 +88,6 @@ def load_projects(filename):
 #     If new completion is entered, update project completion
 #     If new priority is entered, update project priority
 #
-# 8. Define main function:
-#     Load projects from "projects.txt" by calling load_projects
-#     Print welcome message with number of loaded projects
-#
-#     While True:
-#         Print menu options
-#         Get user choice
-#
-#         If choice is 'L' (Load projects):
-#             Prompt user for filename
-#             Call load_projects with filename and update projects list
-#
-#         If choice is 'S' (Save projects):
-#             Prompt user for filename
-#             Call save_projects with filename and current projects list
-#
-#         If choice is 'D' (Display projects):
-#             Call display_projects with current projects list
-#
-#         If choice is 'F' (Filter projects by date):
-#             Call filter_projects_by_date with current projects list
-#
-#         If choice is 'A' (Add new project):
-#             Call add_project with current projects list
-#
-#         If choice is 'U' (Update project):
-#             Call update_project with current projects list
-#
-#         If choice is 'Q' (Quit):
-#             Prompt user to save to "projects.txt" if desired
-#             Break loop to quit program
-#
-#         If choice is invalid:
-#             Print error message for invalid input
+
 #
 # Call main function to run program
