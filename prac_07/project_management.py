@@ -49,13 +49,14 @@ def load_projects(filename):
             project = Project(name, start_date, int(priority), float(cost), int(completion))
             projects.append(project)
     return projects
-#
-# 3. Define save_projects function with parameters filename and projects:
-#     Open filename in write mode
-#     Write header line
-#     For each project in projects:
-#         Write project data in formatted string to file
-#
+
+def save_projects(filename, projects):
+    with open(filename, 'w') as file:
+        file.write("Name\tStart Date\tPriority\tCost\tCompletion\n")
+        for project in projects:
+            file.write(f"{project.name}\t{project.start_date.strftime('%d/%m/%Y')}\t{project.priority}\t{project.cost}\t{project.completion}\n")
+
+
 # 4. Define display_projects function with parameter projects:
 #     Initialize empty list for incomplete_projects and complete_projects
 #     For each project in projects:
