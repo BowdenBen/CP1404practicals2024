@@ -1,6 +1,6 @@
 """
 Time to completion EST: 30 min
-Actual Time to Completion:
+Actual Time to Completion: 45 min
 """
 
 
