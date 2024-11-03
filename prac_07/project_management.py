@@ -102,5 +102,5 @@ def update_project(projects):
         project.update_priority(int(priority))
 
 
-#
-# Call main function to run program
+if __name__ == "__main__":
+    main()
