@@ -2,19 +2,20 @@
 Time to completion EST: 1 hour
 Actual Time to Completion:
 """
+import csv
+from project import Project
 
-# 1. Import Project class and datetime module
-#
-# 2. Define load_projects function with parameter filename:
-#     Open filename in read mode
-#     Skip the header line
-#     Initialize empty list for projects
-#     For each line in file:
-#         Split line into name, start_date, priority, cost, and completion
-#         Parse start_date using datetime to convert to date object
-#         Create Project object with parsed data
-#         Append Project object to projects list
-#     Return projects list
+
+def load_projects(filename):
+    projects = []
+    with open(filename, 'r') as file:
+        next(file)  # Skip the header line
+        for line in file:
+            name, start_date, priority, cost, completion = line.strip().split('\t')
+            start_date = datetime.datetime.strptime(start_date, "%d/%m/%Y").date()
+            project = Project(name, start_date, int(priority), float(cost), int(completion))
+            projects.append(project)
+    return projects
 #
 # 3. Define save_projects function with parameters filename and projects:
 #     Open filename in write mode
