@@ -14,9 +14,10 @@ class Project:
         self.cost = cost
         self.completion = completion
 
-#
-#     Define __str__ method:
-#         Return formatted string with project details
+
+    def __str__(self):
+        return f"{self.name}, start: {self.start_date}, priority: {self.priority}, cost: ${self.cost:.2f}, completion: {self.completion}%"
+
 #
 #     Define is_complete method:
 #         Return True if completion is 100, otherwise False
