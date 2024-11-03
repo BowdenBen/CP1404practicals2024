@@ -13,6 +13,10 @@ class Guitar:
     def __str__(self):
         return f"{self.name} ({self.year}) : {self.cost}"
 
+    def __lt__(self, other): # other refers to the second Guitar object in the pair.
+        """Less than method for sorting Guitars by year."""
+        return self.year < other.year
+
     def get_age(self):
         current_year = 2024  # Update to current year
         return current_year - self.year
