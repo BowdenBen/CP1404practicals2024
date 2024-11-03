@@ -75,5 +75,18 @@ def add_new_guitars(guitars):
             print("Invalid input. Please enter a valid year and cost.")
         name = input("Name: ")
 
+
+def save_guitars(filename, guitars):
+    """
+    Save all guitars to a CSV file.
+    """
+    with open(filename, "w") as file:
+        # Write header
+        file.write("Name,Year,Cost\n")
+        for guitar in guitars:
+            # Write each guitar's details in CSV format
+            file.write(f"{guitar.name},{guitar.year},{guitar.cost}\n")
+    print(f"\nAll guitars have been saved to {filename}")
+
 if __name__ == "__main__":
     main()
