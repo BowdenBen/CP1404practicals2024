@@ -20,4 +20,15 @@ def main():
     print("\nThese are my guitars, sorted by year:")
     display_guitars(guitars)
 
-
+def load_guitars(filename):
+    """
+    Load guitars from a CSV file and create Guitar instances.
+    Returns:
+        list of Guitar: A list of Guitar objects loaded from the file.
+    """
+    guitars = []
+    with open(filename, "r") as file:
+        for row in file:
+            name, year, cost = row[0], int(row[1]), float(row[2])
+            guitars.append(Guitar(name, year, cost))
+    return guitars
