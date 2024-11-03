@@ -56,5 +56,24 @@ def display_guitars(guitars):
     for guitar in guitars:
         print(guitar)
 
+
+def add_new_guitars(guitars):
+    """
+    Prompt the user to enter new guitars and add them to the list.
+    """
+    print("\nAdd new guitars (leave name blank to stop):")
+    name = input("Name: ")
+    while name != "":
+        try:
+            year = int(input("Year: "))
+            cost = float(input("Cost: $"))
+            # Create and add the new guitar
+            new_guitar = Guitar(name, year, cost)
+            guitars.append(new_guitar)
+            print(f"{name} ({year}) : ${cost:.2f} added.")
+        except ValueError:
+            print("Invalid input. Please enter a valid year and cost.")
+        name = input("Name: ")
+
 if __name__ == "__main__":
     main()
