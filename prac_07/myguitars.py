@@ -20,6 +20,12 @@ def main():
     print("\nThese are my guitars, sorted by year:")
     display_guitars(guitars)
 
+    # Get new guitars from user and add them to the list
+    add_new_guitars(guitars)
+
+    # Save all guitars back to the CSV file
+    save_guitars("guitars.csv", guitars)
+
 
 
 def load_guitars(filename):
