@@ -18,17 +18,20 @@ class Project:
     def __str__(self):
         return f"{self.name}, start: {self.start_date}, priority: {self.priority}, cost: ${self.cost:.2f}, completion: {self.completion}%"
 
-#
-#     Define is_complete method:
-#         Return True if completion is 100, otherwise False
-#
-#     Define update_completion method with parameter new_completion:
-#         Set completion to new_completion
-#
-#     Define update_priority method with parameter new_priority:
-#         Set priority to new_priority
-#
-#     Define __lt__ method with parameter other:
-#         Return True if this project’s priority is less than other’s priority
+
+    def is_complete(self):
+        return self.completion == 100
+
+
+    def update_completion(self, new_completion):
+        self.completion = new_completion
+
+
+    def update_priority(self, new_priority):
+        self.priority = new_priority
+
+
+    def __lt__(self, other):
+        return self.priority < other.priority
 
 
