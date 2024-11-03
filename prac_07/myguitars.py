@@ -20,6 +20,8 @@ def main():
     print("\nThese are my guitars, sorted by year:")
     display_guitars(guitars)
 
+
+
 def load_guitars(filename):
     """
     Load guitars from a CSV file and create Guitar instances.
@@ -28,7 +30,25 @@ def load_guitars(filename):
     """
     guitars = []
     with open(filename, "r") as file:
-        for row in file:
-            name, year, cost = row[0], int(row[1]), float(row[2])
+        # Skip header row if it exists
+        next(file)  # Uncomment this line if there is a header in the CSV file
+        for line in file:
+            # Split each line by commas
+            parts = line.strip().split(',')
+            # Parse the parts into name, year, and cost
+            name = parts[0]
+            year = int(parts[1])
+            cost = float(parts[2])
+            # Create a Guitar object and add it to the list
             guitars.append(Guitar(name, year, cost))
     return guitars
+
+def display_guitars(guitars):
+    """
+    Display details of a list of Guitar objects.
+    """
+    for guitar in guitars:
+        print(guitar)
+
+if __name__ == "__main__":
+    main()
