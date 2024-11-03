@@ -3,18 +3,17 @@ Time to completion EST: 1 hour
 Actual Time to Completion:
 """
 
-class Project
+import datetime
 
-# Define class Project:
-#     Attributes:
-#         name - string for project name
-#         start_date - date object for start date
-#         priority - integer for priority level
-#         cost - float for cost estimate
-#         completion - integer for completion percentage
-#
-#     Define __init__ method with parameters (name, start_date, priority, cost, completion):
-#         Initialize attributes with parameter values
+class Project:
+    """Initialize attributes with parameter values"""
+    def __init__(self, name, start_date, priority, cost, completion):
+        self.name = name
+        self.start_date = start_date  # Should be a date object
+        self.priority = priority
+        self.cost = cost
+        self.completion = completion
+
 #
 #     Define __str__ method:
 #         Return formatted string with project details
