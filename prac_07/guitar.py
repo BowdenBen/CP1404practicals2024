@@ -1,6 +1,6 @@
 """
-Time to completion EST: 1 hour
-Actual Time to Completion: 30 min
+Time to completion EST: 30 min
+Actual Time to Completion:
 """
 
 class Guitar:
