@@ -39,6 +39,5 @@ class ConvertMilesKm(App):
         miles = float(value)
         miles -= 1
         self.root.ids.input_number.text = str(miles)
-        return value
 
 ConvertMilesKm().run()
