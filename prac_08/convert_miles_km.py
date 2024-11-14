@@ -9,6 +9,7 @@ from kivy.app import App
 from kivy.lang import Builder
 from kivy.core.window import Window
 
+KMS_IN_MILE = 1.60934
 
 class ConvertMilesKm(App):
     """ ConvertMilesKm is a Kivy App for converting miles to kilometres. """
@@ -23,7 +24,7 @@ class ConvertMilesKm(App):
         """ handle calculation for miles to kilometres """
         try:
             miles = float(value)
-            kilometres = miles * 1.60934
+            kilometres = miles * KMS_IN_MILE
             self.root.ids.output_label.text = str(kilometres)
         except ValueError:
             pass
