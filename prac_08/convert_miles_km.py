@@ -35,6 +35,7 @@ class ConvertMilesKm(App):
             miles = float(value)
             miles += 1
             self.root.ids.input_number.text = str(miles)
+            self.handle_calculate(self.root.ids.input_number.text)  # Trigger recalculation
         except ValueError:
             self.root.ids.input_number.text = "0"
 
@@ -44,6 +45,7 @@ class ConvertMilesKm(App):
             miles = float(value)
             miles -= 1
             self.root.ids.input_number.text = str(miles)
+            self.handle_calculate(self.root.ids.input_number.text)  # Trigger recalculation
         except ValueError:
             self.root.ids.input_number.text = "0"
 

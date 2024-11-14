@@ -7,6 +7,7 @@ BoxLayout:
             text: '7'
             font_size: 48
             multiline: False
+            on_text: app.handle_calculate(self.text)  # Trigger calculation on text change
         BoxLayout:
             orientation: 'vertical'
             size_hint_x: 0.2
@@ -16,9 +17,9 @@ BoxLayout:
             Button:
                 text: 'Down'
                 on_press: app.handle_down(input_number.text)
-    Button:
-        text: 'Convert miles to kilometres'
-        on_press: app.handle_calculate(input_number.text)
+#    Button:
+#        text: 'Convert miles to kilometres'
+#        on_press: app.handle_calculate(input_number.text)
     Label:
         id: output_label
         font_size: 48
