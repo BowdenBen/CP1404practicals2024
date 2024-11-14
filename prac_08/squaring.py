@@ -1,8 +1,8 @@
 """
 CP1404/CP5632 Practical
 Kivy GUI program to square a number
-Lindsay Ward, IT@JCU
-Started 13/10/2015
+Benjamin Bowden
+Started 14/11/2024, completion time 1 hour
 """
 
 from kivy.app import App
