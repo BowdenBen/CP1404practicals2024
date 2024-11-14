@@ -27,18 +27,24 @@ class ConvertMilesKm(App):
             kilometres = miles * KMS_IN_MILE
             self.root.ids.output_label.text = str(kilometres)
         except ValueError:
-            pass
+            self.root.ids.input_number.text = "0"
 
     def handle_up(self, value):
         """ handle incrementing miles up by 1"""
-        miles = float(value)
-        miles += 1
-        self.root.ids.input_number.text = str(miles)
+        try:
+            miles = float(value)
+            miles += 1
+            self.root.ids.input_number.text = str(miles)
+        except ValueError:
+            self.root.ids.input_number.text = "0"
 
     def handle_down(self, value):
         """ handle incrementing miles down by 1"""
-        miles = float(value)
-        miles -= 1
-        self.root.ids.input_number.text = str(miles)
+        try:
+            miles = float(value)
+            miles -= 1
+            self.root.ids.input_number.text = str(miles)
+        except ValueError:
+            self.root.ids.input_number.text = "0"
 
 ConvertMilesKm().run()
