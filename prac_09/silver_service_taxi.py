@@ -8,7 +8,7 @@ class SilverServiceTaxi(Taxi):
 
     def __init__(self, fanciness, **kwargs):
         """Initialize a SilverServiceTaxi with fanciness and other Taxi attributes."""
-        super().__init__(self, **kwargs)
+        super().__init__(**kwargs)
         self.fanciness = fanciness
         self.price_per_km = Taxi.price_per_km * fanciness #fanciness scales the Taxi classes prices per km.
 
