@@ -20,7 +20,7 @@ class Taxi(Car):
 
     def get_fare(self):
         """Return the price for the taxi trip."""
-        return self.price_per_km * self.current_fare_distance
+        return round(self.price_per_km * self.current_fare_distance, 1) #applies the round() function with a precision of 1 (one decimal place)
 
     def start_fare(self):
         """Begin a new fare."""
