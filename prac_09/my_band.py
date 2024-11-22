@@ -4,17 +4,6 @@ from musician import Musician
 from guitar import Guitar
 
 
-class Band:
-    """Represents a musical band with a name and a list of musicians."""
-
-    def __init__(self, name):
-        """Initialise a Band name and a list of musicians"""
-        self.name = name
-        self.musicians = []
-
-
-
-
 def main():
     band = Band("Extreme")
     nuno = Musician("Nuno Bettencourt")
