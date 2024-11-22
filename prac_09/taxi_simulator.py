@@ -27,18 +27,27 @@ def main():
             except ValueError:
                 print("That's not a valid Taxi.")
 
-"""
-While loop set to "doesn't equal q"
-    print menu options
-    get menu choice
-    if statement for menu choice
-        q to quit, breaks while loop, displays totals
-        c to choose taxi, print taxi list
-            try, except (AskForForgiveness) to error check for listed taxi
-        d to choose drive
-            if, else to ensure taxi has been chosen
-            once taxi has been chosen
-                try, except (AskForForgiveness) to error check for integer given
-        
- 
-"""
+        elif choice == "d":
+            if current_taxi is None:
+                print("You need to choose a valid taxi.")
+            else:
+                current_taxi.start_fare()
+                try:
+                    distance = int(input("Please choose how far to drive."))
+                    distance_driven = current_taxi.drive(distance)
+                    trip_cost = current_taxi.get_fare()
+                    total_bill += trip_cost
+                    print(f"Your {current_taxi.name} trip cost you ${trip_cost:.2f}")
+                except ValueError:
+                    print("Invalid distance")
+        else:
+            print("Invalid choice.")
+
+        print(f"Your bill to date: ${total_bill:.2f}")
+
+    print(f"Total trip cost: ${total_bill:.2f}")
+
+
+if __name__ == "__main__":
+    main()
+
