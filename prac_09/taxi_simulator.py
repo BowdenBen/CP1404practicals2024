@@ -40,7 +40,7 @@ def main():
                     print(f"Your {current_taxi.name} trip cost you ${trip_cost:.2f}")
                 except ValueError:
                     print("Invalid distance")
-        else:
+        elif choice != "q":
             print("Invalid choice.")
 
         print(f"Your bill to date: ${total_bill:.2f}")
