@@ -19,8 +19,8 @@ def main():
 
         if choice =="c":
             print("Taxis Available:")
-            for taxi in taxis:
-                print(taxi)
+            for i, taxi in enumerate(taxis):
+                print(f"{i} - {taxi}")
             try:
                 taxi_choice = int(input("Please choose a Taxi."))
                 current_taxi = taxis[taxi_choice]
