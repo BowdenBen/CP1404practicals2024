@@ -13,6 +13,19 @@ def main():
     menu = "q)uit, c)hoose, d)rive"
     print("Let's Drive!")
 
+    while choice != "q":
+        print(menu)
+        choice = input(">>> ").lower()
+
+        if choice =="c":
+            print("Taxis Available:")
+            for taxi in taxis:
+                print(taxi)
+            try:
+                taxi_choice = int(input("Please choose a Taxi."))
+                current_taxi = taxis[taxi_choice]
+            except ValueError:
+                print("That's not a valid Taxi.")
 
 """
 While loop set to "doesn't equal q"
