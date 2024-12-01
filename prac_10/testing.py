@@ -73,7 +73,7 @@ doctest.testmod()
 # and one more that you decide is a useful test.
 # Run your doctests and watch the tests fail.
 # Then write the body of the function so that the tests pass.
-def format_sentence():
+def format_sentence(phrase):
     """Format a sentence starting with a capital and ending with a single full stop.
     >>> format_sentence('hello')
     'Hello.'
@@ -82,4 +82,8 @@ def format_sentence():
     >>> format_sentence('this is a test')
     'This is a test.'
     """
-    pass
+    phrase = phrase.strip()
+    if not phrase.endswith('.'):
+        phrase += '.'
+    return phrase[0].upper() + phrase[1:]
+
