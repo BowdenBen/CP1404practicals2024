@@ -3,9 +3,7 @@ CP1404/CP5632 - Practical
 Pseudocode for temperature conversion
 """
 
-MENU = """C - Convert Celsius to Fahrenheit
-F - Convert Fahrenheit to Celsius
-Q - Quit"""
+MENU = "C - Convert Celsius to Fahrenheit\nF - Convert Fahrenheit to Celsius\nQ - Quit"
 print(MENU)
 choice = input(">>> ").upper() # whether lower or upper case is entered, input is converted to upper case
 while choice != "Q": # While "Q" isn't selected, therefore "Q" ends the while loop
